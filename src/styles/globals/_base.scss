@@ -1,0 +1,47 @@
+@import "../setting";
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  font-family: $global-font-family;
+}
+
+.hide {
+  display: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: $global-font-family;
+  padding: 0;
+  margin: 0;
+}
+li {
+  font-family: $global-font-family;
+}
+
+//lists
+ul {
+  list-style-type: none;
+}
+
+// Set vertical alignment for svg elements
+svg {
+  vertical-align: middle;
+}

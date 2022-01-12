@@ -1,0 +1,51 @@
+@import "../../styles/shared-styles.scss";
+.navigationWrapper {
+  background-color: color(EbonyClay);
+  padding: to-rem(0 200);
+  @include media(">LGdesktop") {
+    padding: to-rem(0);
+  }
+  @include media("<=phone") {
+    padding: to-rem(0 30);
+  }
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: to-rem(120);
+  @include media(">=LGdesktop") {
+    max-width: to-rem(1920);
+    margin: 0 auto;
+    padding: to-rem(0);
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    width: to-rem(690);
+    justify-content: space-between;
+    @include media("<=phone") {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      width: to-rem(313);
+      justify-content: space-between;
+      li {
+        font-size: to-rem(24);
+        font-weight: 600;
+        color: color(GhostWhite);
+      }
+    }
+    &__signInBtn {
+      width: to-rem(160);
+      height: to-rem(55);
+    }
+    &__signUpBtn {
+      width: to-rem(145);
+      height: to-rem(55);
+    }
+  }
+}

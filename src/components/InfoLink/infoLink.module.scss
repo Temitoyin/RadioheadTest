@@ -1,0 +1,43 @@
+@import "../../styles/shared-styles.scss";
+
+.infoLink {
+  max-width: to-rem(610);
+  @include media("<=phone") {
+    padding: to-rem(0 30);
+  }
+  &__header {
+    font-size: to-rem(48);
+    font-weight: 500;
+    color: color(GhostWhite);
+    margin-bottom: to-rem(32);
+    @include media("<=phone") {
+      font-size: to-rem(28);
+      margin: to-rem(15 0);
+    }
+  }
+  &__subText {
+    font-size: to-rem(24);
+    color: color(DarkText);
+    margin-bottom: to-rem(24);
+    @include media("<=phone") {
+      font-size: to-rem(18);
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+
+    svg {
+      height: to-rem(18);
+    }
+    p {
+      font-size: to-rem(24);
+      color: color(NeonBlue);
+      font-weight: 800;
+      margin-left: to-rem(15);
+      @include media("<=phone") {
+        font-size: to-rem(14);
+      }
+    }
+  }
+}

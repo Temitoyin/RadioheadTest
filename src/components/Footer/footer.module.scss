@@ -1,0 +1,65 @@
+@import "../../styles/shared-styles.scss";
+
+.footer {
+  background-color: color(EbonyClay);
+  &__mainContent {
+    display: grid;
+    grid-template-columns: 3fr 5fr;
+    padding: to-rem(48 200 123 200);
+    @include media("<=phone") {
+      padding: to-rem(48 30 0 30);
+      grid-template-columns: 1fr;
+    }
+    &__right {
+      max-width: to-rem(472);
+      p {
+        color: color(RealyDarkText);
+        font-size: to-rem(18);
+        margin-top: to-rem(45);
+      }
+    }
+    &__left {
+      display: flex;
+      justify-content: space-between;
+      margin-top: to-rem(20);
+      @include media("<=phone") {
+        flex-direction: column;
+      }
+      .footerList {
+        &__header {
+          color: color(DarkText);
+          font-size: to-rem(32);
+          margin-bottom: to-rem(22);
+          @include media("<=phone") {
+            font-size: to-rem(26);
+          }
+        }
+        &__options {
+          margin: 0;
+          padding: 0;
+          li {
+            color: color(GhostWhite);
+            font-size: to-rem(24);
+            margin-bottom: to-rem(17);
+            @include media("<=phone") {
+              font-size: to-rem(18);
+            }
+          }
+        }
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    height: to-rem(100);
+    background-color: color(Mirage);
+    justify-content: center;
+    align-items: center;
+    .footerIcon {
+      margin-right: to-rem(101);
+      @include media("<=phone") {
+        margin-right: to-rem(20);
+      }
+    }
+  }
+}

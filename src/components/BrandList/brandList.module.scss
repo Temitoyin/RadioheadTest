@@ -1,0 +1,19 @@
+@import "../../styles/shared-styles.scss";
+
+.brandList {
+  align-items: center;
+  background-color: color(EbonyClay);
+  display: flex;
+  justify-content: space-between;
+  height: to-rem(180);
+  padding: to-rem(0 223);
+  @include media("<=phone") {
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    padding: to-rem(20 0);
+    svg {
+      margin-bottom: to-rem(20);
+    }
+  }
+}

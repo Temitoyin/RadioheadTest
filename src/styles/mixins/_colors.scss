@@ -1,0 +1,11 @@
+@function color($color) {
+    @return map-get($palette, $color);
+}
+
+@mixin svgColor($color) {
+    svg {
+        path {
+            fill: $color;
+        }
+    }
+}

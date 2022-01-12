@@ -1,0 +1,23 @@
+@import "../../styles/shared-styles.scss";
+
+.button {
+  background-color: color(Facebookblue);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: to-rem(20);
+  border-radius: to-rem(4);
+}
+.variantOne {
+  background-color: color(NeonBlue);
+  color: color(LightPurple);
+  border: to-rem(0);
+}
+.variantTwo {
+  background-color: color(EbonyClay);
+  color: color(NeonBlue);
+  border: to-rem(1) solid color(NeonBlue);
+}

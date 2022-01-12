@@ -1,0 +1,151 @@
+@import "styles/shared-styles.scss";
+
+.home {
+  &__header {
+    height: to-rem(841);
+    background-image: url("assets/images/headerBackgroundImg.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: color(Mirage);
+    @include media("<=phone") {
+      height: auto;
+    }
+    &__info {
+      max-width: to-rem(611);
+      margin-left: to-rem(200);
+      padding-top: to-rem(214);
+      @include media("<=phone") {
+        margin-left: to-rem(30);
+      }
+      h1 {
+        font-size: to-rem(48);
+        color: color(GhostWhite);
+        margin-bottom: to-rem(74);
+        @include media("<=phone") {
+          font-size: to-rem(28);
+          margin-bottom: to-rem(34);
+        }
+      }
+      &Btn {
+        width: to-rem(211);
+        height: to-rem(55);
+        @include media("<=phone") {
+          width: to-rem(170);
+          height: to-rem(45);
+        }
+      }
+      &Images {
+        margin-top: to-rem(34);
+        img {
+          margin-right: to-rem(19);
+        }
+      }
+    }
+  }
+  &__musicYouLove {
+    background-color: color(Mirage);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: to-rem(80 200);
+
+    @include media(">LGdesktop") {
+      min-width: to-rem(1920);
+    }
+    @include media("<=phone") {
+      flex-direction: column;
+      padding: to-rem(40 0);
+    }
+    &__images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: to-rem(30);
+      margin-right: to-rem(100);
+      @include media("<=phone") {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        margin-right: to-rem(0);
+        img {
+          max-width: to-rem(150);
+          max-height: to-rem(150);
+        }
+      }
+    }
+  }
+  &__handPicked {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: color(Mirage);
+    box-shadow: 0px 30px 20px 0px #1a1a1a40 inset;
+    padding: to-rem(80 200);
+    @include media("<=phone") {
+      flex-direction: column;
+      padding: to-rem(40 0);
+    }
+    &__musicPlayers {
+      @include media("<=phone") {
+        display: flex;
+        flex-direction: column;
+        padding: to-rem(40 30 0 30);
+      }
+      img:first-child {
+        margin-right: to-rem(100);
+        @include media("<=phone") {
+          margin-right: to-rem(0);
+        }
+      }
+    }
+  }
+  &__whyRadioHead {
+    padding: to-rem(80 200 49 200);
+    background-color: color(Mirage);
+    box-shadow: 0px 30px 20px 0px #1a1a1a40 inset;
+    @include media("<=phone") {
+      padding: to-rem(40 30);
+    }
+    &__header {
+      color: color(GhostWhite);
+      font-size: to-rem(48);
+      font-weight: 500;
+      @include media("<=phone") {
+        font-size: to-rem(28);
+      }
+    }
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: to-rem(70 0);
+      margin-top: to-rem(36);
+      @include media("<=phone") {
+        grid-template-columns: 1fr;
+      }
+      &Item {
+        max-width: to-rem(610);
+        display: flex;
+        &Bar {
+          width: to-rem(5);
+          height: to-rem(48);
+          background-color: color(NeonBlue);
+          border-radius: to-rem(2.5);
+          margin-right: to-rem(16);
+        }
+        h3 {
+          font-size: to-rem(32);
+          color: color(GhostWhite);
+          margin-bottom: to-rem(30);
+          @include media("<=phone") {
+            font-size: to-rem(25);
+          }
+        }
+        p {
+          font-size: to-rem(24);
+          color: color(DarkText);
+          @include media("<=phone") {
+            font-size: to-rem(18);
+          }
+        }
+      }
+    }
+  }
+}

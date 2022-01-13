@@ -14,6 +14,9 @@
       font-size: to-rem(28);
       margin: to-rem(15 0);
     }
+    @include media(">tablet", "<ndesktop") {
+      font-size: to-rem(34);
+    }
   }
   &__subText {
     font-size: to-rem(24);

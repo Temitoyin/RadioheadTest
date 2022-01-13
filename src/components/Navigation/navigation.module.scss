@@ -2,13 +2,13 @@
 .navigationWrapper {
   background-color: color(EbonyClay);
   padding: to-rem(0 200);
-  @include media(">LGdesktop") {
-    padding: to-rem(0);
-  }
   @include media("<=phone") {
     padding: to-rem(0 30);
   }
-  @include media(">phone", "<LGdesktop") {
+  @include media(">=tablet", "<ndesktop") {
+    padding: to-rem(0 60);
+  }
+  @include media(">=ndesktop", "<LGdesktop") {
     padding: to-rem(0 100);
   }
 }
@@ -28,7 +28,7 @@
     align-items: center;
     width: to-rem(690);
     justify-content: space-between;
-    @include media("<=phone") {
+    @include media("<=tablet") {
       display: none;
     }
 
@@ -42,6 +42,9 @@
         font-weight: 600;
         color: color(GhostWhite);
         cursor: pointer;
+        @include media(">=tablet", "<ndesktop") {
+          font-size: to-rem(20);
+        }
         &:hover {
           transition: 0.5s;
           color: color(NeonBlue);
@@ -51,10 +54,18 @@
     &__signInBtn {
       width: to-rem(160);
       height: to-rem(55);
+      @include media(">=tablet", "<ndesktop") {
+        width: to-rem(100);
+        height: to-rem(35);
+      }
     }
     &__signUpBtn {
       width: to-rem(145);
       height: to-rem(55);
+      @include media(">=tablet", "<ndesktop") {
+        width: to-rem(100);
+        height: to-rem(35);
+      }
     }
   }
 }

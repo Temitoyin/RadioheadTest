@@ -16,7 +16,13 @@
       margin-bottom: to-rem(20);
     }
   }
-  @include media(">phone", "<LGdesktop") {
+  @include media(">=ndesktop", "<LGdesktop") {
     padding: to-rem(0 113);
+  }
+  @include media(">=tablet", "<ndesktop") {
+    padding: to-rem(0 60);
+    svg {
+      transform: scale(0.8) !important;
+    }
   }
 }

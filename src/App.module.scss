@@ -19,7 +19,10 @@
         padding: to-rem(114 0 100 0);
         margin-left: to-rem(30);
       }
-      @include media(">phone", "<LGdesktop") {
+      @include media(">=tablet", "<ndesktop") {
+        margin-left: to-rem(60);
+      }
+      @include media(">=ndesktop", "<LGdesktop") {
         margin-left: to-rem(100);
       }
       h1 {
@@ -53,8 +56,14 @@
     justify-content: space-between;
     align-items: center;
     padding: to-rem(80 200);
-    @include media(">phone", "<LGdesktop") {
+    @include media(">=ndesktop", "<LGdesktop") {
       padding: to-rem(80 100);
+    }
+    @include media("<=tablet") {
+      flex-direction: column;
+    }
+    @include media(">=tablet", "<ndesktop") {
+      padding: to-rem(60);
     }
     @include media(">LGdesktop") {
       min-width: to-rem(1920);
@@ -77,7 +86,21 @@
           max-height: to-rem(150);
         }
       }
-      @include media(">phone", "<LGdesktop") {
+      @include media(">=tablet", "<1024px") {
+        margin-right: to-rem(0) !important;
+        gap: to-rem(15);
+      }
+      @include media(">1024px", "<ndesktop") {
+        margin-right: to-rem(50);
+        gap: to-rem(15);
+      }
+      @include media(">=tablet", "<ndesktop") {
+        img {
+          max-width: to-rem(170);
+          max-height: to-rem(170);
+        }
+      }
+      @include media(">ndesktop", "<LGdesktop") {
         img {
           max-width: to-rem(200);
           max-height: to-rem(200);
@@ -96,8 +119,14 @@
       flex-direction: column;
       padding: to-rem(40 0);
     }
-    @include media(">phone", "<LGdesktop") {
+    @include media("<=tablet") {
+      flex-direction: column;
+    }
+    @include media(">=ndesktop", "<LGdesktop") {
       padding: to-rem(80 100);
+    }
+    @include media(">=tablet", "<ndesktop") {
+      padding: to-rem(50 60);
     }
     &__musicPlayers {
       @include media("<=phone") {
@@ -105,11 +134,17 @@
         flex-direction: column;
         padding: to-rem(40 30 0 30);
       }
+      @include media(">=tablet", "<ndesktop") {
+        display: flex;
+      }
       img {
         cursor: pointer;
         &:hover {
           transition: 0.5s;
           box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.88);
+        }
+        @include media(">=tablet", "<ndesktop") {
+          transform: scale(0.8);
         }
       }
       img:first-child {
@@ -130,8 +165,11 @@
     @include media("<=phone") {
       padding: to-rem(40 30);
     }
-    @include media(">phone", "<LGdesktop") {
+    @include media(">=ndesktop", "<LGdesktop") {
       padding: to-rem(80 100 49 100);
+    }
+    @include media(">=tablet", "<ndesktop") {
+      padding: to-rem(50 60 49 60);
     }
 
     &__header {

@@ -10,7 +10,13 @@
       padding: to-rem(48 30 0 30);
       grid-template-columns: 1fr;
     }
-    @include media(">phone", "<LGdesktop") {
+    @include media(">=tablet", "<1024px") {
+      grid-template-columns: 1fr;
+    }
+    @include media(">=tablet", "<ndesktop") {
+      padding: to-rem(48 60 123 60);
+    }
+    @include media(">=ndesktop", "<LGdesktop") {
       padding: to-rem(48 100 123 100);
     }
     &__right {
@@ -19,6 +25,9 @@
         color: color(RealyDarkText);
         font-size: to-rem(18);
         margin-top: to-rem(45);
+      }
+      @include media(">=desktop", "<=ndesktop") {
+        margin-right: to-rem(20);
       }
     }
     &__left {
@@ -33,8 +42,12 @@
           color: color(DarkText);
           font-size: to-rem(32);
           margin-bottom: to-rem(22);
+
           @include media("<=phone") {
             font-size: to-rem(26);
+          }
+          @include media(">=tablet", "<ndesktop") {
+            font-size: to-rem(22);
           }
         }
         &__options {
@@ -44,6 +57,12 @@
             color: color(GhostWhite);
             font-size: to-rem(24);
             margin-bottom: to-rem(17);
+            @include media(">=desktop", "<=ndesktop") {
+              font-size: to-rem(22);
+            }
+            @include media(">=tablet", "<desktop") {
+              font-size: to-rem(18);
+            }
             @include media("<=phone") {
               font-size: to-rem(18);
             }

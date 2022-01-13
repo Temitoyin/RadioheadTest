@@ -9,7 +9,6 @@ import playList1 from "assets/images/playList1.png";
 import playList2 from "assets/images/playList2.png";
 import { infoLinkData, infoLinkImageData, whyRadioHeadData } from "./data";
 import gsap from "gsap";
-import LocomotiveScroll from "locomotive-scroll";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Footer from "components/Footer/footer";
 import styles from "./App.module.scss";

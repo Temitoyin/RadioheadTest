@@ -22,6 +22,7 @@
     margin: 0 auto;
     padding: to-rem(0);
   }
+
   &__list {
     display: flex;
     align-items: center;
@@ -40,6 +41,11 @@
         font-size: to-rem(24);
         font-weight: 600;
         color: color(GhostWhite);
+        cursor: pointer;
+        &:hover {
+          transition: 0.5s;
+          color: color(NeonBlue);
+        }
       }
     }
     &__signInBtn {

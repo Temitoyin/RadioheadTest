@@ -10,14 +10,27 @@
   cursor: pointer;
   font-size: to-rem(20);
   border-radius: to-rem(4);
+  cursor: pointer;
+  transition: 0.5s;
 }
 .variantOne {
   background-color: color(NeonBlue);
   color: color(LightPurple);
   border: to-rem(0);
+  &:hover {
+    background-color: color(GhostWhite);
+    color: color(NeonBlue);
+    transform: scale(1.1);
+  }
 }
 .variantTwo {
   background-color: color(EbonyClay);
   color: color(NeonBlue);
   border: to-rem(1) solid color(NeonBlue);
+  &:hover {
+    background-color: color(EbonyClay);
+    color: color(GhostWhite);
+    border: to-rem(1) solid color(GhostWhite);
+    transform: scale(1.1);
+  }
 }

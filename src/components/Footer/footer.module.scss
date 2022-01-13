@@ -63,6 +63,34 @@
       @include media("<=phone") {
         margin-right: to-rem(20);
       }
+      &:first-child:hover {
+        svg {
+          & > path {
+            transition: 0.5s;
+            fill: black;
+          }
+          circle {
+            transition: 0.5s;
+            fill: black;
+          }
+        }
+      }
+      &:nth-child(2):hover {
+        svg {
+          path {
+            transition: 0.5s;
+            fill: color(facebookBlue);
+          }
+        }
+      }
+      &:nth-child(3):hover {
+        svg {
+          path {
+            transition: 0.5s;
+            fill: color(twitterBlue);
+          }
+        }
+      }
     }
   }
 }

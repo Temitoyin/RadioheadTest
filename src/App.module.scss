@@ -1,6 +1,7 @@
 @import "styles/shared-styles.scss";
 
 .home {
+  overflow: hidden;
   &__header {
     height: to-rem(841);
     background-image: url("assets/images/headerBackgroundImg.png");
@@ -15,6 +16,7 @@
       margin-left: to-rem(200);
       padding-top: to-rem(214);
       @include media("<=phone") {
+        padding: to-rem(114 0 100 0);
         margin-left: to-rem(30);
       }
       @include media(">phone", "<LGdesktop") {

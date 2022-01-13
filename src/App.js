@@ -20,12 +20,15 @@ const App = () => {
     const tl1 = gsap.timeline({
       scrollTrigger: {
         trigger: "#albumImageWrapper",
+        toggleActions: "play complete reverse reset",
         start: "0 80%",
+        end: "top 55%",
       },
     });
     const tl2 = gsap.timeline({
       scrollTrigger: {
         trigger: "#handPickedWrapper",
+        toggleActions: "play complete reverse reset",
         start: "0 80%",
       },
     });
@@ -43,10 +46,11 @@ const App = () => {
       stagger: 0.1,
       duration: 0.3,
       ease: "power1.in",
+      scrub: 1,
       scrollTrigger: {
         trigger: "#brandListWrapper",
-        // toggleActions: "play complete reverse reset",
-        start: "0 80%",
+        start: "0 85%",
+        end: "top 95%",
       },
     });
     tl1.from("#albumImage", {
@@ -73,6 +77,18 @@ const App = () => {
       x: 50,
       duration: 1,
       ease: "power1.in",
+    });
+    gsap.from("#whyRadioItem", {
+      opacity: 0,
+      y: -10,
+      duration: 0.7,
+      ease: "power1.in",
+      stagger: 1,
+      scrollTrigger: {
+        trigger: "#whyRadioWrapper",
+        toggleActions: "play complete reverse reset",
+        start: "0 80%",
+      },
     });
   }, []);
   return (
@@ -130,7 +146,7 @@ const App = () => {
             <img src={playList2} alt="music player" />
           </div>
         </section>
-        <section className={styles.home__whyRadioHead}>
+        <section className={styles.home__whyRadioHead} id="whyRadioWrapper">
           <h2 className={styles.home__whyRadioHead__header}>Why radiohead?</h2>
           <div className={styles.home__whyRadioHead__list}>
             {whyRadioHeadData &&
@@ -138,6 +154,7 @@ const App = () => {
                 <div
                   className={styles.home__whyRadioHead__listItem}
                   key={e.header}
+                  id="whyRadioItem"
                 >
                   <div className={styles.home__whyRadioHead__listItemBar} />
                   <div className={styles.home__whyRadioHead__listItemText}>

@@ -79,6 +79,7 @@
     align-items: center;
     .footerIcon {
       margin-right: to-rem(101);
+      cursor: pointer;
       @include media("<=phone") {
         margin-right: to-rem(20);
       }

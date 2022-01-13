@@ -8,6 +8,9 @@
   @include media("<=phone") {
     padding: to-rem(0 30);
   }
+  @include media(">phone", "<LGdesktop") {
+    padding: to-rem(0 100);
+  }
 }
 .navigation {
   display: flex;

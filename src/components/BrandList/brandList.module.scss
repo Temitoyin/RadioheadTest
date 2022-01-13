@@ -16,4 +16,7 @@
       margin-bottom: to-rem(20);
     }
   }
+  @include media(">phone", "<LGdesktop") {
+    padding: to-rem(0 113);
+  }
 }

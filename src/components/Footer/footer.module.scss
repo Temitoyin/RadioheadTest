@@ -10,6 +10,9 @@
       padding: to-rem(48 30 0 30);
       grid-template-columns: 1fr;
     }
+    @include media(">phone", "<LGdesktop") {
+      padding: to-rem(48 100 123 100);
+    }
     &__right {
       max-width: to-rem(472);
       p {

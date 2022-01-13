@@ -17,6 +17,9 @@
       @include media("<=phone") {
         margin-left: to-rem(30);
       }
+      @include media(">phone", "<LGdesktop") {
+        margin-left: to-rem(100);
+      }
       h1 {
         font-size: to-rem(48);
         color: color(GhostWhite);
@@ -48,7 +51,9 @@
     justify-content: space-between;
     align-items: center;
     padding: to-rem(80 200);
-
+    @include media(">phone", "<LGdesktop") {
+      padding: to-rem(80 100);
+    }
     @include media(">LGdesktop") {
       min-width: to-rem(1920);
     }
@@ -70,6 +75,12 @@
           max-height: to-rem(150);
         }
       }
+      @include media(">phone", "<LGdesktop") {
+        img {
+          max-width: to-rem(200);
+          max-height: to-rem(200);
+        }
+      }
     }
   }
   &__handPicked {
@@ -83,6 +94,9 @@
       flex-direction: column;
       padding: to-rem(40 0);
     }
+    @include media(">phone", "<LGdesktop") {
+      padding: to-rem(80 100);
+    }
     &__musicPlayers {
       @include media("<=phone") {
         display: flex;
@@ -94,6 +108,9 @@
         @include media("<=phone") {
           margin-right: to-rem(0);
         }
+        @include media(">phone", "<LGdesktop") {
+          margin-right: to-rem(20);
+        }
       }
     }
   }
@@ -104,6 +121,10 @@
     @include media("<=phone") {
       padding: to-rem(40 30);
     }
+    @include media(">phone", "<LGdesktop") {
+      padding: to-rem(80 100 49 100);
+    }
+
     &__header {
       color: color(GhostWhite);
       font-size: to-rem(48);

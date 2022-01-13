@@ -22,7 +22,8 @@ const App = () => {
         trigger: "#albumImageWrapper",
         toggleActions: "play complete reverse reset",
         start: "0 80%",
-        end: "top 55%",
+        end: "top 45%",
+        // markers: true,
       },
     });
     const tl2 = gsap.timeline({
@@ -30,6 +31,7 @@ const App = () => {
         trigger: "#handPickedWrapper",
         toggleActions: "play complete reverse reset",
         start: "0 80%",
+        end: "top 45%",
       },
     });
 
@@ -56,8 +58,7 @@ const App = () => {
     tl1.from("#albumImage", {
       opacity: 0,
       x: -100,
-      stagger: 0.1,
-      duration: 0.5,
+      duration: 1,
       ease: "power1.in",
     });
     tl1.from("#infoLink1", {
@@ -74,7 +75,7 @@ const App = () => {
     });
     tl2.from("#musicPlayersWrapper", {
       opacity: 0,
-      x: 50,
+      x: 100,
       duration: 1,
       ease: "power1.in",
     });
@@ -112,11 +113,8 @@ const App = () => {
         <section id="brandListWrapper">
           <BrandList />
         </section>
-        <section className={styles.home__musicYouLove}>
-          <div
-            className={styles.home__musicYouLove__images}
-            id="albumImageWrapper"
-          >
+        <section className={styles.home__musicYouLove} id="albumImageWrapper">
+          <div className={styles.home__musicYouLove__images}>
             {infoLinkImageData &&
               infoLinkImageData.map((e, i) => (
                 <img src={e} id="albumImage" alt="album art" />

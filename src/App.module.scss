@@ -2,12 +2,15 @@
 
 .home {
   overflow: hidden;
+
   &__header {
     height: to-rem(841);
     background-image: url("assets/images/headerBackgroundImg.png");
     background-repeat: no-repeat;
     background-position: right;
     background-color: color(Mirage);
+    margin-top: to-rem(120);
+
     @include media("<=phone") {
       height: auto;
     }
@@ -22,7 +25,7 @@
       @include media(">=tablet", "<ndesktop") {
         margin-left: to-rem(60);
       }
-      @include media(">=ndesktop", "<LGdesktop") {
+      @include media(">ndesktop", "<LGdesktop") {
         margin-left: to-rem(100);
       }
       h1 {

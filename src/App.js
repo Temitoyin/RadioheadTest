@@ -9,14 +9,17 @@ import playList1 from "assets/images/playList1.png";
 import playList2 from "assets/images/playList2.png";
 import { infoLinkData, infoLinkImageData, whyRadioHeadData } from "./data";
 import gsap from "gsap";
+import LocomotiveScroll from "locomotive-scroll";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Footer from "components/Footer/footer";
 import styles from "./App.module.scss";
 
 const App = () => {
-  gsap.registerPlugin(ScrollTrigger);
   let headerInfo = useRef(null);
+  let contentToScroll = useRef(null);
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     const tl1 = gsap.timeline({
       scrollTrigger: {
         trigger: "#albumImageWrapper",
@@ -34,7 +37,6 @@ const App = () => {
         end: "top 45%",
       },
     });
-
     gsap.from(headerInfo.current, {
       opacity: 0,
       x: -50,
@@ -53,6 +55,17 @@ const App = () => {
         trigger: "#brandListWrapper",
         start: "0 85%",
         end: "top 95%",
+      },
+    });
+    gsap.set("#navigation", {
+      css: {
+        position: "fixed",
+        width: "100%",
+        zIndex: "100",
+      },
+      scrollTrigger: {
+        trigger: "#header",
+        start: "0 10%",
       },
     });
     tl1.from("#albumImage", {
@@ -79,6 +92,7 @@ const App = () => {
       duration: 1,
       ease: "power1.in",
     });
+
     gsap.from("#whyRadioItem", {
       opacity: 0,
       y: -10,
@@ -93,11 +107,11 @@ const App = () => {
     });
   }, []);
   return (
-    <div className={styles.home}>
-      <nav className={styles.home__navigation}>
+    <div className={styles.home} ref={contentToScroll} id="smooth-scroll">
+      <nav className={styles.home__navigation} id="navigation">
         <Navigation />
       </nav>
-      <header className={styles.home__header}>
+      <header className={styles.home__header} id="header">
         <div className={styles.home__header__info} ref={headerInfo}>
           <h1>Discover, search, and play any song featuring voice control.</h1>
           <div className={styles.home__header__infoBtn}>
